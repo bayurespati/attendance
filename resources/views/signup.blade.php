@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Attendance: Sign in</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width" />
     <style>
         * {
             padding: 0;
@@ -338,7 +339,7 @@
                                     <input type="email" name="email">
                                 </div>
                                 <div class="field padding-bottom--24">
-                                    <label for="email">Perusahaan / Organisasi</label>
+                                    <label for="email">Perusahaan / Instansi</label>
                                     <input type="text" name="perusahaan_organisasi">
                                 </div>
                                 <div class="field padding-bottom--24">

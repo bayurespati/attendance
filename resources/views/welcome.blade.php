@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Attendance: Sign in</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width" />
     <style>
         * {
             padding: 0;
