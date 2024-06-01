@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Stackfindover: Sign in</title>
+    <title>Attendance: Sign in</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         * {
@@ -329,7 +329,7 @@
                             <div id="stripe-login">
                                 <div class="field padding-bottom--24">
                                     <div class="field">
-                                        <a class="ssolink" href="#" style="font-size: 30px;">{{$peserta->name}}</a>
+                                        <a class="ssolink" href="#" style="font-size: 30px;"> {{$peserta->name}}</a>
                                         <br>
                                         <a class="ssolink" href="#" style="font-size: 24px;">
                                             Meja : {{$peserta->meja->number}}

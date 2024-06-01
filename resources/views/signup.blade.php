@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Stackfindover: Sign in</title>
+    <title>Attendance: Sign in</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         * {
