@@ -346,10 +346,12 @@
                                 <div class="field padding-bottom--24">
                                     <input type="submit" name="submit" value="DAFTAR">
                                 </div>
-                                <div class="field padding-bottom--24">
-                                    <a href="/" class="btn btn-primary">BACK</a>
-                                </div>
                             </form>
+                        </div>
+                    </div>
+                    <div class="footer-link padding-top--24">
+                        <span>Kembali ke halaman depan? <a href="/">Back</a></span>
+                        <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
                         </div>
                     </div>
                 </div>
