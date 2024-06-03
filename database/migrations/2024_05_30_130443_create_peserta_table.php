@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('jabatan')->nullable();
             $table->integer('meja_id')->unique();
+            $table->boolean('status');
             $table->rememberToken();
             $table->timestamps();
         });

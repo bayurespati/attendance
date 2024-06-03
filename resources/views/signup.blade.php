@@ -5,6 +5,7 @@
     <title>Attendance: Sign in</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         * {
             padding: 0;
@@ -344,6 +345,9 @@
                                 </div>
                                 <div class="field padding-bottom--24">
                                     <input type="submit" name="submit" value="DAFTAR">
+                                </div>
+                                <div class="field padding-bottom--24">
+                                    <a href="/" class="btn btn-primary">BACK</a>
                                 </div>
                             </form>
                         </div>

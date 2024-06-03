@@ -17,14 +17,24 @@ class UserController extends Controller
             return Redirect::back()->withErrors(['msg' => 'Anda belum terdaftar']);
         }
 
+        $peserta->status = 1;
+        $peserta->save();
+
         return view('show', ["peserta" => $peserta]);
     }
 
     public function show(Request $request)
     {
-        $peserta = Peserta::where('email', "respatibayu48@pins.co.id")->with('meja')->first();
+        $peserta = Peserta::where('email', "respatibayu48@gmail.com")->with('meja')->first();
 
         return view('show', ["peserta" => $peserta]);
+    }
+
+    public function admin(Request $request)
+    {
+        $datas = Peserta::with('meja')->get();
+
+        return view('admin', ["datas" => $datas]);
     }
 
     public function signUp(Request $request)
@@ -33,6 +43,7 @@ class UserController extends Controller
         $peserta->name = $request->name;
         $peserta->email = $request->email;
         $peserta->jabatan = $request->jabatan;
+        $peserta->status = 1;
         $meja = Meja::where('is_taken', "=", 0)->first();
         $peserta->meja_id = $meja->id;
         $meja->is_taken = 1;

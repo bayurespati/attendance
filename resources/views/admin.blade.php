@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <title>Attendance: Sign in</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <style>
         * {
             padding: 0;
@@ -291,94 +294,31 @@
 <body>
     <div class="login-root">
         <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
-            <div class="loginbackground box-background--white padding-top--64">
-                <div class="loginbackground-gridContainer">
-                    <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
-                        <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
-                        </div>
-                    </div>
-                    <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
-                        <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
-                    </div>
-                    <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
-                        <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
-                    </div>
-                    <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
-                        <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
-                    </div>
-                    <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
-                        <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
-                    </div>
-                    <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
-                        <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
-                    </div>
-                    <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
-                        <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
-                    </div>
-                    <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
-                        <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
-                    </div>
-                    <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
-                        <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
-                    </div>
-                </div>
-            </div>
             <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
                 <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
                     <h1><a href="#" rel="dofollow">PINS INDONESIA</a></h1>
                 </div>
-                <!-- <div class="formbg-outer">
-                    <div class="formbg">
-                        <div class="formbg-inner padding-horizontal--48">
-                            <div id="stripe-login">
-                                <div class="field padding-bottom--24">
-                                    <div class="field">
-                                        <a class="ssolink" href="#" style="font-size: 30px;"> {{$peserta->name}}</a>
-                                        <br>
-                                        <a class="ssolink" href="#" style="font-size: 24px;">
-                                            Meja
-                                            <br>
-                                            {{$peserta->meja->number}}
-                                        </a>
-                                        <a class="ssolink" href="#" style="font-size: 24px;">
-                                            Bangku
-                                            <br>
-                                            {{$peserta->meja->bangku_number}}
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-link padding-top--24">
-                    </div>
-                </div> -->
-                <div class="card text-center">
-                    <div class="card-header">
-                        <!-- {{$peserta->name}} -->
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">{{ $peserta->name }}</h3>
-                        <div href="#" class="btn btn-primary">
-                            No Meja
-                            <br>
-                            <h2>
-                                {{ $peserta->meja->number }}
-                            </h2>
-                        </div>
-                        <div href="#" class="btn btn-primary">
-                            No Kursi
-                            <br>
-                            <h2>
-                                {{ $peserta->meja->bangku_number}}
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <!-- 2 days ago -->
-                        <a href="/" class="btn btn-primary">BACK</a>
-                    </div>
-                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Meja</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($datas as $key => $data)
+                        <tr>
+                            <th scope="row">{{$key+1}}</th>
+                            <td>{{$data->name}}</td>
+                            <td>{{$data['meja']['number']}} - {{$data['meja']['bangku_number']}}</td>
+                            <td>{{$data->status ? "Hadir" : "Belum Hadir"}}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
