@@ -14,8 +14,9 @@ class MejaSeeder extends Seeder
     public function run(): void
     {
         $meja = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W'];
+        $bangku = [5, 6, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6];
         for ($i = 0; $i < 23; $i++) {
-            for ($j = 1; $j < 6; $j++) {
+            for ($j = 1; $j <= $bangku[$i]; $j++) {
                 Meja::create([
                     'number' => $meja[$i],
                     'bangku_number' => $j,

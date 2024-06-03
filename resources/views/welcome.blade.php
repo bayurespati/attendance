@@ -331,10 +331,6 @@
                             <form id="stripe-login" method="POST" action="/get-number">
                                 @CSRF
                                 <div class="field padding-bottom--24">
-                                    <label for="email">Nama Lengkap</label>
-                                    <input type="text" name="nama">
-                                </div>
-                                <div class="field padding-bottom--24">
                                     <label for="email">Email</label>
                                     <input type="email" name="email">
                                 </div>

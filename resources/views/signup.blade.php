@@ -335,16 +335,12 @@
                                     <input type="text" name="name">
                                 </div>
                                 <div class="field padding-bottom--24">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email">
-                                </div>
-                                <div class="field padding-bottom--24">
-                                    <label for="email">Perusahaan / Instansi</label>
-                                    <input type="text" name="perusahaan_organisasi">
-                                </div>
-                                <div class="field padding-bottom--24">
                                     <label for="email">Jabatan</label>
                                     <input type="text" name="jabatan">
+                                </div>
+                                <div class="field padding-bottom--24">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email">
                                 </div>
                                 <div class="field padding-bottom--24">
                                     <input type="submit" name="submit" value="DAFTAR">

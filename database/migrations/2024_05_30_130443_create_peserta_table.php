@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('jabatan');
-            $table->string('perusahaan_organisasi');
+            $table->string('jabatan')->nullable();
             $table->integer('meja_id')->unique();
             $table->rememberToken();
             $table->timestamps();

@@ -20,12 +20,18 @@ class UserController extends Controller
         return view('show', ["peserta" => $peserta]);
     }
 
+    public function show(Request $request)
+    {
+        $peserta = Peserta::where('email', "respatibayu48@pins.co.id")->with('meja')->first();
+
+        return view('show', ["peserta" => $peserta]);
+    }
+
     public function signUp(Request $request)
     {
         $peserta = new Peserta();
         $peserta->name = $request->name;
         $peserta->email = $request->email;
-        $peserta->perusahaan_organisasi = $request->perusahaan_organisasi;
         $peserta->jabatan = $request->jabatan;
         $meja = Meja::where('is_taken', "=", 0)->first();
         $peserta->meja_id = $meja->id;

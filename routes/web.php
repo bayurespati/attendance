@@ -11,9 +11,6 @@ Route::get('/sign-up', function () {
     return view('signup');
 });
 
-Route::get('/show', function () {
-    return view('show');
-});
-
+Route::get('/show', [UserController::class, 'show']);
 Route::post('/get-number', [UserController::class, 'getNumber']);
 Route::post('/sign-up', [UserController::class, 'signUp']);
