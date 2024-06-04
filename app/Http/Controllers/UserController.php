@@ -33,12 +33,17 @@ class UserController extends Controller
     public function admin(Request $request)
     {
         $datas = Peserta::with('meja')->get();
-
-        return view('admin', ["datas" => $datas]);
+        $meja = Meja::where('is_taken', 0)->get();
+        return view('admin', ["datas" => $datas, "meja" => $meja]);
     }
 
     public function signUp(Request $request)
     {
+        $peserta = Peserta::where('email', $request->email)->first();
+        if ($peserta) {
+            return Redirect::back()->withErrors(['msg' => 'Email anda sudah terdaftar']);
+        }
+
         $peserta = new Peserta();
         $peserta->name = $request->name;
         $peserta->email = $request->email;

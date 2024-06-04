@@ -350,6 +350,9 @@
                         </div>
                     </div>
                     <div class="footer-link padding-top--24">
+                        @if($errors->any())
+                        <span style="color: red">{{$errors->first()}}</span>
+                        @endif
                         <span>Kembali ke halaman depan? <a href="/">Back</a></span>
                         <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
                         </div>

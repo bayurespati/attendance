@@ -366,16 +366,8 @@
                                 {{ $peserta->meja->number }}
                             </h2>
                         </div>
-                        <div href="#" class="btn btn-primary">
-                            No Kursi
-                            <br>
-                            <h2>
-                                {{ $peserta->meja->bangku_number}}
-                            </h2>
-                        </div>
                     </div>
                     <div class="card-footer text-muted">
-                        <!-- 2 days ago -->
                         <a href="/" class="btn btn-primary">BACK</a>
                     </div>
                 </div>

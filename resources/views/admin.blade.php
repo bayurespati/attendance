@@ -319,6 +319,25 @@
                         @endforeach
                     </tbody>
                 </table>
+
+
+                <h4>Bangku Kosong</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Meja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($meja as $key => $data)
+                        <tr>
+                            <th scope="row">{{$key+1}}</th>
+                            <td>{{$data['number']}} - {{$data['bangku_number']}}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
