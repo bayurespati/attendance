@@ -11,6 +11,7 @@ class UserController extends Controller
 {
     public function getNumber(Request $request)
     {
+        return $this->hold();
         $peserta = Peserta::where('email', $request->email)->with('meja')->first();
 
         if (!$peserta) {
@@ -25,6 +26,7 @@ class UserController extends Controller
 
     public function show(Request $request)
     {
+        return $this->hold();
         $peserta = Peserta::where('email', "respatibayu48@gmail.com")->with('meja')->first();
 
         return view('show', ["peserta" => $peserta]);
@@ -39,6 +41,7 @@ class UserController extends Controller
 
     public function signUp(Request $request)
     {
+        return $this->hold();
         $peserta = Peserta::where('email', $request->email)->first();
         if ($peserta) {
             return Redirect::back()->withErrors(['msg' => 'Email anda sudah terdaftar']);
@@ -56,5 +59,10 @@ class UserController extends Controller
         $peserta->save();
 
         return view('show', ["peserta" => $peserta]);
+    }
+
+    public function hold()
+    {
+        return Redirect::back()->withErrors(['msg' => 'Under develop']);
     }
 }
