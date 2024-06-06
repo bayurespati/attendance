@@ -306,6 +306,7 @@
                             <th scope="col">Nama</th>
                             <th scope="col">Meja</th>
                             <th scope="col">Status</th>
+                            <th scope="col">jam</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -315,13 +316,13 @@
                             <td>{{$data->name}}</td>
                             <td>{{$data['meja']['number']}} - {{$data['meja']['bangku_number']}}</td>
                             <td>{{$data->status ? "Hadir" : "Belum Hadir"}}</td>
+                            <td>{{$data->updated_at }}</td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
 
-
-                <h4>Bangku Kosong</h4>
+                <h4>Bangku Tersedia</h4>
                 <table class="table">
                     <thead>
                         <tr>
