@@ -304,6 +304,7 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nama</th>
+                            <th scope="col">Jabatan</th>
                             <th scope="col">Meja</th>
                             <th scope="col">Status</th>
                             <th scope="col">jam</th>
@@ -314,6 +315,7 @@
                         <tr>
                             <th scope="row">{{$key+1}}</th>
                             <td>{{$data->name}}</td>
+                            <td>{{$data->jabatan}}</td>
                             <td>{{$data['meja']['number']}} - {{$data['meja']['bangku_number']}}</td>
                             <td>{{$data->status ? "Hadir" : "Belum Hadir"}}</td>
                             <td>{{$data->updated_at }}</td>
